@@ -5,7 +5,7 @@ import torch
 model = YOLO("yolov8x.pt")
 
 #personのみ抽出
-results = model.predict("ex2.jpg", classes = [0], conf=2) 
+results = model.predict("ex2.jpg", classes = [0], conf=0.1q) 
 
 img = results[0].orig_img
 boxes = results[0].boxes
